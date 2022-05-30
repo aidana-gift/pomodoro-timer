@@ -1,38 +1,100 @@
-.App {
-  text-align: center;
+.container {
+    min-height: 100vh;
+    background: linear-gradient(90deg, #F78CA0 0%, #F9748F 20.31%, #FD868C 66.67%, #FE9A8B 100%);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.pomodoro {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.CircularProgressbar-trail,
+.CircularProgressbar-path {
+    stroke-width: 2px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.settings-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.settings-button__item {
+    background-color: transparent;
+    border: 0;
+    width: 30px;
+    color: rgba(250, 250, 250, 0.7);
+    cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.timer-buttons {
+    margin-top: 60px;
+}
+
+.pomodoro-button {
+    border: 1px solid #FAFAFA;
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.25));
+    border-radius: 300px;
+    background-color: transparent;
+    padding: 22px 47px;
+    font-family: 'SF Pro Display', sans-serif;
+    font-weight: 300;
+    font-size: 25px;
+    color: #FAFAFA;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.pomodoro-button:hover {
+    opacity: .6;
+}
+
+.settings-modal {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.settings-modal__content {
+    width: 585px;
+    height: 609px;
+    margin: 0 auto;
+    padding: 38px 33px 22px;
+    background: linear-gradient(90deg, #F78CA0 0%, #F9748F 20.31%, #FD868C 66.67%, #FE9A8B 100%), #FEAFAF;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    box-sizing: border-box;
+}
+
+.settings-modal__form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.settings-modal__input {
+    width: 100%;
+    padding: 25px 17px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+    border: none;
+    box-sizing: border-box;
+}
+
+.settings-modal__label {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: #FFFFFF;
+}
+
+.timer-wrapper {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
